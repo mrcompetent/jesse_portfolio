@@ -1,6 +1,6 @@
 #!/bin/bash
 # Install dependencies
-python3 -m pip install -r requirements.txt
+python3 -m pip install -r requirements.txt --break-system-packages
 
 # Make migrations and apply them (optional, if you have a DB on vercel)
 python3 manage.py makemigrations
