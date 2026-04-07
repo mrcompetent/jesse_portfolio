@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section id="hero" class="hero">
+    <div class="hero-container">
+        <div class="hero-text-area reveal active">
+            <p class="overline-text">Strategic Communications & Management</p>
+            <h1 class="hero-title">Words that <span class="italic-highlight">convert.</span><br>Systems that <span class="bold-highlight">scale.</span></h1>
+            <p class="hero-subtitle">I'm Jesse, a copywriter and business manager. I craft compelling narratives that capture attention and build the operational foundations that turn attention into sustainable growth.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn-primary large">Start a Project</a>
+                <a href="#works" class="btn-text">View my work &rarr;</a>
+            </div>
+        </div>
+        <div class="hero-visual reveal active">
+            <!-- A clean abstract visual element instead of code -->
+            <div class="abstract-shape">
+                <div class="circle-1"></div>
+                <div class="rectangle-1"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+    <div class="about-grid">
+        <div class="about-visual reveal">
+            <div class="quote-card">
+                <p>"Good copy tells a story. Great business management ensures that story has a profitable ending."</p>
+                <span class="quote-author">— Jesse</span>
+            </div>
+        </div>
+        <div class="about-content reveal">
+            <h2 class="section-title">The Intersection of Narrative & Operations</h2>
+            <p class="lead-text">Hello, I'm Jesse Egobueze. My career hasn't followed the traditional path, and that's precisely my advantage.</p>
+            <p>I operate at the intersection of creative storytelling and rigorous business management. While designers and developers build the product, I craft the messaging that sells it and optimize the business systems that support it.</p>
+            <p>From coordinating product launches to writing high converting direct response copy, my approach is always data informed, empathy driven, and meticulously executed.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Expertise Section -->
+<section id="expertise" class="expertise-section">
+    <div class="section-header text-center reveal">
+        <p class="overline-text">My Arsenal</p>
+        <h2 class="section-title">Areas of Expertise</h2>
+    </div>
+    
+    <div class="services-grid">
+        <div class="service-card reveal">
+            <div class="service-icon">📝</div>
+            <h3>Strategic Copywriting</h3>
+            <p>Moving beyond mere words to psychological triggers. Whether it's a high stakes landing page, an email sequence, or brand positioning, I write copy designed specifically to drive action and elevate conversions.</p>
+        </div>
+        <div class="service-card reveal">
+            <div class="service-icon">📈</div>
+            <h3>Business Management</h3>
+            <p>Turning chaos into streamlined workflows. I manage cross functional projects, establish key performance indicators (KPIs), and refine operational pipelines to ensure your business scales smoothly.</p>
+        </div>
+        <div class="service-card reveal">
+            <div class="service-icon">🧠</div>
+            <h3>Tech & Marketing Fluency</h3>
+            <p>Bridging the gap between the technical reality and the market's desires. I speak the language of tech, making complex SaaS platforms or new applications instantly accessible and desirable to the end user.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Works Section -->
+<section id="works" class="works-section">
+    <div class="section-header reveal">
+        <p class="overline-text">Case Studies</p>
+        <h2 class="section-title">Selected Works</h2>
+    </div>
+
+    <div class="works-container">
+        
+        <div class="work-showcase reveal">
+            <div class="work-image-container">
+                <a href="https://bejaskihandyman.com/" target="_blank">
+                    <img src="https://res.cloudinary.com/dafytulc6/image/upload/v1775523658/Screenshot_2026-04-06_at_5.35.29_PM_ttw4wt.png" alt="Bejaski Handyman Platform Screenshot" class="work-image">
+                </a>
+            </div>
+            <div class="work-details">
+                <div class="work-tags">
+                    <span>Copywriting</span>
+                    <span>Business Strategy</span>
+                    <span>Service Platform</span>
+                </div>
+                <h3 class="work-title">Bejaski Handyman</h3>
+                <p class="work-description">
+                    Spearheaded the business launch strategy and comprehensive brand copywriting for a modern home and office service booking platform. 
+                </p>
+                <p class="work-impact">
+                    <strong>Impact:</strong> Established a transparent, trustworthy brand voice that effectively communicated value to both service providers and end customers, facilitating seamless user acquisition.
+                </p>
+                <a href="https://bejaskihandyman.com/" target="_blank" class="btn-outline mt-4">Visit Platform &rarr;</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="contact-card reveal">
+        <h2 class="section-title text-center">Ready to elevate your business?</h2>
+        <p class="contact-lead text-center">Whether you need copy that converts or management that scales, let's discuss how we can work together.</p>
+        
+        <div class="text-center mb-4">
+            <button id="say-hello-btn" class="btn-primary large" style="margin-bottom: 2rem;">Let's Talk</button>
+            <div class="direct-email" style="margin-bottom: 2rem;">
+                <span style="color: var(--text-secondary); font-size: 0.95rem;">Or email directly:</span><br>
+                <a href="mailto:jesseegobueze@gmail.com" style="font-size: clamp(1.2rem, 3vw, 1.8rem); color: var(--accent); font-weight: 700; text-decoration: none;">jesseegobueze@gmail.com</a>
+            </div>
+        </div>
+        
+        <div class="contact-form-wrapper">
+            <form id="contact-form" class="hidden" method="POST">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" name="message" required rows="4" placeholder="Tell me about your goals..."></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary block">Send Message</button>
+                <div class="fallback-contact text-center mt-3">
+                    Prefer direct email? Reach me at <a href="mailto:jesseegobueze@gmail.com">jesseegobueze@gmail.com</a>
+                </div>
+                <div id="form-status" class="hidden"></div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

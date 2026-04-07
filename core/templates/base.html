@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio of Jesse Egobueze, producing words that convert and systems that scale through strategic copywriting and business management.">
+    <meta name="keywords" content="Jesse Egobueze, Copywriting, Business Management, Tech, Copywriter, Strategist, Portfolio, Bejaski">
+    <meta name="author" content="Jesse Egobueze">
+    <title>Jesse Egobueze | Copywriter & Business Strategist</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jesseportfolio.vercel.app/">
+    <meta property="og:title" content="Jesse Egobueze | Copywriting & Business Management">
+    <meta property="og:description" content="Personal Portfolio of Jesse Egobueze. Strategic copywriting and business management driving sustainable growth.">
+    <!-- Replace this with a real image later -->
+    <meta property="og:image" content="https://res.cloudinary.com/dafytulc6/image/upload/v1775523658/Screenshot_2026-04-06_at_5.35.29_PM_ttw4wt.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jesseportfolio.vercel.app/">
+    <meta property="twitter:title" content="Jesse Egobueze | Copywriter & Business Strategist">
+    <meta property="twitter:description" content="Strategic copywriting and business management driving sustainable growth.">
+    <meta property="twitter:image" content="https://res.cloudinary.com/dafytulc6/image/upload/v1775523658/Screenshot_2026-04-06_at_5.35.29_PM_ttw4wt.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://jesseportfolio.vercel.app/">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jesse Egobueze",
+      "url": "https://jesseportfolio.vercel.app/",
+      "jobTitle": ["Copywriter", "Business Manager"],
+      "sameAs": [
+        "mailto:jesseegobueze@gmail.com"
+      ],
+      "description": "Strategic copywriting and business management professional. Words that convert. Systems that scale."
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Elegant Serif and Clean Sans-Serif -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="/" class="logo">Jesse.</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#expertise">Services</a>
+                <a href="#works">Works</a>
+                <a href="#contact" class="btn-primary">Get in Touch</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <h2 class="footer-logo">Jesse.</h2>
+            <p>&copy; 2026 Jesse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
